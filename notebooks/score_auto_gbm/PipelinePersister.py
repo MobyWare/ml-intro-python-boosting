@@ -47,7 +47,8 @@ class PipelinePersister(object):
             
             predictor = GridSearchCV(localPipe, localParams, cv = 5, scoring = make_scorer(mean_squared_error), verbose=gridVerbosity).fit(features, target).best_estimator_
         
-        return predictor
+        # Return any preprocessing objects. Needed for scaling later.
+        return predictor, localPipe.named_steps['preprocess']
 
     def save(self, model, path=None):
         if model is None:
