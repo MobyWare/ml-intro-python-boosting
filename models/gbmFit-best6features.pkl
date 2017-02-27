@@ -70,10 +70,10 @@ aVdriveWheels_rwd
 p37
 assS'transformed_columns_'
 p38
-cpandas.indexes.base
+cpandas.core.index
 _new_Index
 p39
-(cpandas.indexes.base
+(cpandas.core.index
 Index
 p40
 (dp41

@@ -60,7 +60,7 @@ class PipelinePersister(object):
         with open(path, "wb") as pickle_file:
             cPickle.dump(model, pickle_file)
 
-    def load(path):
+    def load(self, path):
         with open(path, "rb") as pickle_file:
             return cPickle.load(pickle_file)                             
 
