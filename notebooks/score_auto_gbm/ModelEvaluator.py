@@ -35,7 +35,7 @@ class ModelEvaluator(object):
                 if self.is_number(prediction) == True:
                     prediction_list.extend([float(prediction)])
 
-            result = zip(np.array(prediction_list), np.array([sum(prediction_list)/len(prediction_list)] * len(prediction_list)))        
+            result = zip(np.array(prediction_list), np.array([sum(prediction_list)/len(prediction_list)] * len(prediction_list)))
         else:            
             for idx, row in enumerate(features.to_dict(orient='records')):
                 try:
